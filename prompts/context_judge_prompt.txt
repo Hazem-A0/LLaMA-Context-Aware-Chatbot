@@ -1,0 +1,3 @@
+Classify the following user message as either "context_provided" or "context_missing".
+Message: {input}
+Only respond with one of the two labels, no explanations.
