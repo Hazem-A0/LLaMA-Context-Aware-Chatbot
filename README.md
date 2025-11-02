@@ -2,6 +2,9 @@
 
 A context-aware chatbot built with LangChain, Streamlit, and Ollama LLM that can understand and respond to questions based on uploaded PDF documents and web search results.
 
+<img width="1919" height="905" alt="image" src="https://github.com/user-attachments/assets/6ec25796-5bbd-4325-abe7-28837cbb2c6d" />
+
+
 ## Features
 
 - 📄 PDF Document Processing
@@ -106,72 +109,6 @@ python main.py
 2. Type your questions and press Enter
 3. Type 'exit' or 'quit' to end the session
 
-## Troubleshooting
-
-### FAISS Installation Issues
-
-If you encounter problems installing FAISS on Windows:
-
-1. Try installing via pip:
-```bash
-pip install faiss-cpu
-```
-
-2. If that fails, use conda:
-```bash
-conda install -c pytorch faiss-cpu
-```
-
-### Ollama Issues
-
-1. Ensure Ollama is running:
-```bash
-# Check if Ollama is running
-ollama list
-```
-
-2. If you get connection errors:
-- Verify the Ollama service is running
-- Check if the model is downloaded:
-```bash
-ollama pull llama3
-```
-
-3. Model alternatives:
-- You can modify the model in `agent_runner.py` to use a different Ollama model
-- Or switch to another LLM provider (requires code changes)
-
-### Vector Store Issues
-
-If you encounter problems with the FAISS vector store:
-
-1. Clear the vector store:
-- Delete the `vector_store/index.faiss` file
-- The system will recreate it when you upload new PDFs
-
-2. Check file permissions:
-- Ensure the `vector_store` directory is writable
-- Verify `uploaded_pdfs` directory exists and is writable
-
-## Development
-
-### Customization
-
-1. Modify LLM settings:
-- Edit `agent_runner.py` to change the model or parameters
-- Adjust temperature for more/less creative responses
-
-2. Change embeddings:
-- Edit `pdf_relevance_checker.py` to use different embedding models
-- Configure chunk size and overlap for document processing
-
-3. UI customization:
-- Modify `app.py` to change the Streamlit interface
-- Custom CSS is included for styling
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
